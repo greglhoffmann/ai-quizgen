@@ -6,7 +6,7 @@ Dynamic quiz creation using LLMs and modern web stack
 
 `ai-quizgen` is a web-based application that allows users to generate multiple-choice quizzes on any topic using **AI**. The system creates **5 questions per topic**, each with **4 options (A–D)**, and shows the correct answers after quiz submission.
 
-This project demonstrates **full-stack integration with AI**, secure handling of API keys, caching, optional persistence of quiz results, lightweight topic disambiguation, and JSON output enforcement and validation.
+This project demonstrates **full-stack integration with AI**, secure handling of API keys, caching, persistence of quiz results, lightweight topic disambiguation, and JSON output enforcement and validation.
 
 ## 2. Key Features
 
@@ -153,7 +153,7 @@ npm run dev
 
 - Secrets live in `.env.local` and are never committed; an `.env.example` is provided. No secrets are exposed via `NEXT_PUBLIC_*`.
 - AI calls run only on the server. Keys are never sent to the browser; logs avoid printing full prompts or secrets.
-- Input hardening: `sanitizeTopic`/`isTopicValid` + Zod schemas. Invalid requests return 400.
+- Input hardening: `sanitizeTopic`/`isTopicValid` + Zod schemas. Invalid requests return 400. Mitigates some prompt injection risk by limiting topic length.
 - Abuse control: per‑IP rate limit (Redis or in‑memory). On exceed, API returns 429 with `Retry-After`.
 - Cache safety: keys are `quiz:{difficulty}:{topic}`, TTL ~1h, `forceFresh` invalidates. No PII is cached.
 - Persistence is optional: if MongoDB isn’t configured, save endpoints disable gracefully (no partial writes).
