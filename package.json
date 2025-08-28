@@ -1,0 +1,36 @@
+{
+  "name": "ai-quizgen",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@upstash/redis": "^1.35.3",
+    "mongodb": "^6.19.0",
+    "next": "^14.2.32",
+    "openai": "^4.58.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.5",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.5",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.5.4",
+    "vitest": "^3.2.4"
+  }
+}
