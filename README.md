@@ -1,5 +1,5 @@
-# ai-quizgen
-**Tagline:** Dynamic quiz creation using LLMs and modern web stack
+# AI QuizGen
+Dynamic quiz creation using LLMs and modern web stack
 
 
 ## 1. Project Overview
@@ -102,7 +102,7 @@ This project demonstrates **full-stack integration with AI**, secure handling of
 ## 5. Setup and Deployment
 
 ### Production/demo use
-- Access the web app at this Vercel domain: https://your-project.vercel.app
+- Access the web app at [this Vercel domain](https://ai-quizgen.vercel.app/)
 
 ### Local development
 1. Clone the repo:
